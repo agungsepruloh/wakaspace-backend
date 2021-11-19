@@ -1,0 +1,46 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "node": true,
+    "es2020": true
+  },
+  "extends": [
+    "airbnb-base",
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:jsdoc/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "plugins": ["jsdoc", "module-resolver", "import"],
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
+  "rules": {
+    "valid-jsdoc": ["warn", { "requireReturnType": false, "requireReturn": false, "requireParamDescription": false }],
+    "prettier/prettier": "error",
+    "no-console": "error",
+    "func-names": "off",
+    "no-underscore-dangle": "off",
+    "consistent-return": "off",
+    "import/prefer-default-export": "off",
+    /*
+     Check More rules about jsdoc
+   {@link https://github.com/gajus/eslint-plugin-jsdoc}
+ */
+    "jsdoc/require-param-description": 0,
+    "jsdoc/require-returns-type": 0,
+    // "import/no-cycle": [2, { "ignoreExternal": true }]
+    "import/no-cycle": 0
+  }
+}

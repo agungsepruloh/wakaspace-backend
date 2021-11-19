@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "paths": {
+      "@wakaspace/models": ["./src/models/index"],
+      "@wakaspace/services/admin": ["./src/services/admin/index"],
+      "@wakaspace/services": ["./src/services/index"],
+      "@wakaspace/constants": ["./src/lib/constants/index"],
+      "@wakaspace/moment": ["./src/lib/utils/moment"],
+      "@wakaspace/exception": ["./src/lib/exceptions/wakaspaceError"],
+      "@wakaspace/plugins": ["./src/lib/plugins/index"],
+      "@wakaspace/validators": ["./src/lib/validators/index"],
+      "@wakaspace/passport": ["./src/lib/utils/passport-strategy/index"],
+      "@wakaspace/config": ["./src/config/index"],
+      "@wakaspace/utils": ["./src/lib/utils/index"],
+      "@wakaspace/modules/*": ["./src/lib/modules/*"],
+      "@wakaspace/logger": ["./src/loaders/logger"],
+      "@wakaspace/core": ["./src/lib/core/index"],
+      "@wakaspace/middlewares": ["./src/api/middlewares/index"]
+    }
+  }
+}
