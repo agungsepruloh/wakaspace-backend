@@ -9,9 +9,9 @@ export class MarketplaceService {
     const rarities = await RarityModel.find();
     const types = await TypeModel.find();
     return [
-      { title: 'Race', values: races },
-      { title: 'Rarity', values: rarities },
-      { title: 'Type', values: types },
+      { title: 'Race', keyword: 'race', values: races },
+      { title: 'Rarity', keyword: 'rarity', values: rarities },
+      { title: 'Type', keyword: 'type', values: types },
     ];
   }
 }
