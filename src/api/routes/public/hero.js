@@ -12,7 +12,7 @@ export default (app) => {
   route.get('/', async (req, res, next) => {
     try {
       const data = await HeroService.Paginate();
-      return res.send({ data }).status(200);
+      return res.success({ data }).status(200);
     } catch (e) {
       return next(e);
     }
