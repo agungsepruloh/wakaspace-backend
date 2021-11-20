@@ -9,17 +9,8 @@ export class HeroService extends HeroModel {
    */
   static async Paginate(pageDto, filter) {
     const { page, limit } = pageDto;
-    const data = await this.paginate(filter, { page, limit });
-    const docs = [];
-
-    for (const doc of data.docs) {
-      const hero = doc.toObject();
-      Reflect.deleteProperty(hero, 'typeId');
-      Reflect.deleteProperty(hero, 'rarityId');
-      docs.push(hero);
-    }
-
-    Reflect.set(data, 'docs', docs);
+    const populate = ['type', 'rarity'];
+    const data = await this.paginate(filter, { page, limit, populate });
     return data;
   }
 }

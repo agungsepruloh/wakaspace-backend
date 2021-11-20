@@ -30,12 +30,10 @@ const schema = {
   typeId: {
     type: Types.ObjectId,
     ref: CollectionDB.TYPE,
-    autopopulate: true,
   },
   rarityId: {
     type: Types.ObjectId,
     ref: CollectionDB.RARITY,
-    autopopulate: true,
   },
 };
 
@@ -48,12 +46,18 @@ class Hero extends BaseSchema {
   }
 
   loadVirtuals() {
-    this.virtual('type').get(function () {
-      return this.typeId.title;
+    this.virtual('type', {
+      ref: CollectionDB.TYPE,
+      localField: 'typeId',
+      foreignField: '_id',
+      justOne: true,
     });
 
-    this.virtual('rarity').get(function () {
-      return this.rarityId.title;
+    this.virtual('rarity', {
+      ref: CollectionDB.RARITY,
+      localField: 'rarityId',
+      foreignField: '_id',
+      justOne: true,
     });
   }
 }
