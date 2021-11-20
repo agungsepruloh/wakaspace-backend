@@ -5,14 +5,19 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "start:dev": "nodemon --exec babel-node src/index.js",
+    "start:dev": "NODE_ENV=development nodemon --exec babel-node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "WAKASPACE",
   "license": "ISC",
   "dependencies": {
+    "config": "^3.3.6",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "moment-timezone": "^0.5.34",
+    "mongoose": "^6.0.13",
+    "mongoose-delete": "^0.5.4"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
