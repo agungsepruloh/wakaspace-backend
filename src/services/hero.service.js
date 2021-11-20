@@ -1,4 +1,5 @@
 import { HeroModel } from '@wakaspace/models';
+import { Model } from 'mongoose';
 
 export class HeroService extends HeroModel {
   /**
@@ -11,6 +12,17 @@ export class HeroService extends HeroModel {
     const { page, limit } = pageDto;
     const populate = ['type', 'rarity'];
     const data = await this.paginate(filter, { page, limit, populate });
+    return data;
+  }
+
+  /**
+   * Find hero by ID
+   * @param {String} heroId hero's ID
+   * @returns {Model} doc
+   */
+  static async FindById(heroId) {
+    const populate = ['type', 'rarity'];
+    const data = await this.findById(heroId).populate(populate);
     return data;
   }
 }

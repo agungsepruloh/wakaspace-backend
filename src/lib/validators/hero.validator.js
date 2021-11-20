@@ -1,4 +1,5 @@
 import { Joi } from 'celebrate';
+import { JoiObjectId } from './extended.validator';
 
 const validator = ({ error, _ }, next) => (error ? next(error) : next());
 
@@ -16,4 +17,11 @@ const paging = async (req, res, next) => {
   validator(schema.validate(req.query), next);
 };
 
-export default { paging };
+const readHeroValidator = async (req, res, next) => {
+  const schema = Joi.object({
+    heroId: JoiObjectId.required(),
+  });
+  validator(schema.validate(req.params), next);
+};
+
+export default { paging, readHeroValidator };
