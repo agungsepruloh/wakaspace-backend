@@ -1,10 +1,10 @@
 import { Router } from 'express';
-import race from './routes/public/race';
+import hero from './routes/public/hero';
 
 export default () => {
   const app = Router();
 
-  race(app);
+  hero(app);
 
   return app;
 };

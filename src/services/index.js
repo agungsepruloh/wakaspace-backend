@@ -1,1 +1,1 @@
-export * from './race.service';
+export * from './hero.service';
