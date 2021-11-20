@@ -981,6 +981,11 @@ array-flatten@1.1.1:
   resolved "https://registry.yarnpkg.com/array-flatten/-/array-flatten-1.1.1.tgz#9a5f699051b1e7073328f2a008968b64ea2955d2"
   integrity sha1-ml9pkFGx5wczKPKgCJaLZOopVdI=
 
+async@^1.4.2:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
+  integrity sha1-7GphrlZIDAw8skHJVhjiCJL5Zyo=
+
 babel-plugin-dynamic-import-node@^2.3.3:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/babel-plugin-dynamic-import-node/-/babel-plugin-dynamic-import-node-2.3.3.tgz#84fda19c976ec5c6defef57f9427b3def66e17a3"
@@ -2077,6 +2082,21 @@ lodash.debounce@^4.0.8:
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
 
+lodash.foreach@^4.1.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.foreach/-/lodash.foreach-4.5.0.tgz#1a6a35eace401280c7f06dddec35165ab27e3e53"
+  integrity sha1-Gmo16s5AEoDH8G3d7DUWWrJ+PlM=
+
+lodash.get@^4.0.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
+  integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
+
+lodash.merge@^4.6.2:
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
+  integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
+
 lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
@@ -2199,10 +2219,41 @@ mongodb@4.1.4:
   optionalDependencies:
     saslprep "^1.0.3"
 
+mongoose-aggregate-paginate-v2@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/mongoose-aggregate-paginate-v2/-/mongoose-aggregate-paginate-v2-1.0.5.tgz#bf0bd79535608bb057247ebf568605c6427bffe1"
+  integrity sha512-qA2CHGaLW/FpTN5n5tpGQM5vCkPtc7ebOayGJxkKpsGMUpUyOVhcj7EfpOd5hvl8rSZoCmZ9FoOhLenEK+mNVg==
+
+mongoose-autopopulate@^0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/mongoose-autopopulate/-/mongoose-autopopulate-0.16.0.tgz#d3fa11b8ffc2ffc8b107debcdeed2e7bf2947c2b"
+  integrity sha512-OSRETKRTk6B3cF7cSLYPE+iUs/DTIY5+07gVYNzCdTRu4oB3uMahc0qjZYepZqZJKm+nv8SihtSHRM5gScn+fA==
+
 mongoose-delete@^0.5.4:
   version "0.5.4"
   resolved "https://registry.yarnpkg.com/mongoose-delete/-/mongoose-delete-0.5.4.tgz#588374bf144cbffa209a549f247e5482054715f2"
   integrity sha512-zKkcWFEwTneVG4Oiy+qJRJPFCiGlqOJToHeU3a3meJybWsHCnWxdHkGEkFWNY5cmYEv5av3WwByOhPlQ6I+FmQ==
+
+mongoose-fill@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/mongoose-fill/-/mongoose-fill-1.7.0.tgz#dab72b34b9600133be7504a7f4bf2ff2d316014d"
+  integrity sha1-2rcrNLlgATO+dQSn9L8v8tMWAU0=
+  dependencies:
+    async "^1.4.2"
+
+mongoose-paginate-v2@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/mongoose-paginate-v2/-/mongoose-paginate-v2-1.4.2.tgz#482cea73f4a0bd49131ef9004694c73cae93b73e"
+  integrity sha512-b7FBe7fasJazhlTIfMSPyIST04yvobASXKmUt3ducnvYThulCyGSPhPcSYOzXcPmqBR4tpMnafIJxv+8GjM+UA==
+
+mongoose-unique-validator@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/mongoose-unique-validator/-/mongoose-unique-validator-3.0.0.tgz#cc65a7237573cfc82d848f2fb9fade8627575760"
+  integrity sha512-WwC09CN2OQ39ONCEN2quR2L5CLHau3p2VYegRMitoVwdKA738uuJRlrTHXt5J6WyJBSloCILxwDZ5qbu4yEXcA==
+  dependencies:
+    lodash.foreach "^4.1.0"
+    lodash.get "^4.0.2"
+    lodash.merge "^4.6.2"
 
 mongoose@^6.0.13:
   version "6.0.13"

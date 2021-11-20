@@ -17,7 +17,12 @@
     "lodash": "^4.17.21",
     "moment-timezone": "^0.5.34",
     "mongoose": "^6.0.13",
-    "mongoose-delete": "^0.5.4"
+    "mongoose-aggregate-paginate-v2": "^1.0.5",
+    "mongoose-autopopulate": "^0.16.0",
+    "mongoose-delete": "^0.5.4",
+    "mongoose-fill": "^1.7.0",
+    "mongoose-paginate-v2": "^1.4.2",
+    "mongoose-unique-validator": "^3.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
