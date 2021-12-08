@@ -24,7 +24,9 @@
     "mongoose-delete": "^0.5.4",
     "mongoose-fill": "^1.7.0",
     "mongoose-paginate-v2": "^1.4.2",
-    "mongoose-unique-validator": "^3.0.0"
+    "mongoose-unique-validator": "^3.0.0",
+    "moralis": "^0.0.147",
+    "web3": "^1.6.1"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
