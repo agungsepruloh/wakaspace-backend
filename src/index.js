@@ -2,7 +2,7 @@ import express from 'express';
 
 const startServer = async () => {
   const app = express();
-  const PORT = process.env.PORT || 5000;
+  const PORT = process.env.PORT || 4000;
 
   /* eslint-disable global-require */
   await require('./loaders').default(app);

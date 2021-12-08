@@ -4,5 +4,9 @@
   },
   "db": {
     "uri": "YOUR_MONGO_URI"
+  },
+  "moralis": {
+    "serverUrl": "https://ca8s94pezy7e.usemoralis.com:2053/server",
+    "appId": "otzsSd1mYXlZl1qhK9ydukROCb4vOrqJFZHK1v3j"
   }
 }
