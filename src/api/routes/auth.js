@@ -1,6 +1,6 @@
-import { AuthService } from '@wakaspace/services';
 import { AuthValidator } from '@wakaspace/validators';
 import { Router, Express } from 'express';
+import Moralis from 'moralis/node';
 
 const route = Router();
 
@@ -12,8 +12,20 @@ export default (app) => {
 
   route.get('/signin', AuthValidator.signInValidator, async (req, res, next) => {
     try {
-      const data = await AuthService.SignIn(req.body);
-      return res.success({ data }).status(200);
+      const { username, password } = req.body;
+      const user = await Moralis.User.logIn(username, password);
+      return res.success({ data: user.toJSON() }).status(200);
+    } catch (e) {
+      return next(e);
+    }
+  });
+
+  route.get('/token', AuthValidator.tokenValidator, async (req, res, next) => {
+    try {
+      const { sessionToken } = req.body;
+      Moralis.User.enableUnsafeCurrentUser();
+      const user = await Moralis.User.become(sessionToken);
+      return res.success({ data: user.toJSON() }).status(200);
     } catch (e) {
       return next(e);
     }
