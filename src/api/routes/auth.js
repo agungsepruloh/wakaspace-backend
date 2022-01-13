@@ -10,7 +10,7 @@ const route = Router();
 export default (app) => {
   app.use('/auth', route);
 
-  route.get('/signin', AuthValidator.signInValidator, async (req, res, next) => {
+  route.post('/signin', AuthValidator.signInValidator, async (req, res, next) => {
     try {
       const { username, password } = req.body;
       const user = await Moralis.User.logIn(username, password);
@@ -20,7 +20,7 @@ export default (app) => {
     }
   });
 
-  route.get('/token', AuthValidator.tokenValidator, async (req, res, next) => {
+  route.post('/token', AuthValidator.tokenValidator, async (req, res, next) => {
     try {
       const { sessionToken } = req.body;
       Moralis.User.enableUnsafeCurrentUser();
